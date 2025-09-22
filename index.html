@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caesar Cipher Web App</title>
+  <script defer src="script.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+  <div class="bg-white p-6 rounded shadow-md w-full max-w-md">
+    <h1 class="text-2xl font-bold mb-4 text-center">🔐 Caesar Cipher</h1>
+
+    <!-- Text input -->
+    <label class="block mb-2 font-medium">Message:</label>
+    <textarea id="messageInput" class="w-full p-2 border rounded mb-4" rows="3" placeholder="Enter your message here..."></textarea>
+
+    <!-- Key input -->
+    <label class="block mb-2 font-medium">Key (Shift Value):</label>
+    <input id="keyInput" type="number" class="w-full p-2 border rounded mb-4" placeholder="e.g. 3" />
+
+    <!-- Mode selection -->
+    <label class="block mb-2 font-medium">Mode:</label>
+    <select id="modeSelect" class="w-full p-2 border rounded mb-4">
+      <option value="encode">Encode</option>
+      <option value="decode">Decode</option>
+    </select>
+
+    <!-- Action button -->
+    <button onclick="processMessage()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full mb-4">Run Cipher</button>
+
+    <!-- Output -->
+    <label class="block mb-2 font-medium">Result:</label>
+    <div id="outputArea" class="p-2 bg-gray-200 rounded min-h-[3rem]"></div>
+  </div>
+</body>
+</html>
